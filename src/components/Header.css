@@ -1,0 +1,76 @@
+/* client/src/components/Header.css */
+
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #E0D9D3; /* Subtle border from our theme */
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .header-logo img {
+    height: 40px;
+  }
+  
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #A6793D; /* Bronze-Gold accent */
+  }
+  
+  .nav-link-primary {
+    background-color: #A6793D;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link-primary:hover {
+    background-color: #8c632e;
+    color: #fff;
+  }
+  
+  .welcome-message {
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  .btn-logout {
+    background: none;
+    border: 1px solid #A6793D;
+    color: #A6793D;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-logout:hover {
+    background-color: #A6793D;
+    color: #fff;
+  }

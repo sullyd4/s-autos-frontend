@@ -1,0 +1,201 @@
+/* client/src/pages/SignUpPage.css */
+
+/* --- Font Imports (Example using Google Fonts) --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap');
+
+/* --- Root Variables for Branding --- */
+:root {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Poppins', sans-serif;
+  --color-background: #F8F5F2; /* Ivory/Cream */
+  --color-text: #333333;
+  --color-accent: #A6793D; /* Bronze-Gold */
+  --color-subtle-border: #E0D9D3;
+}
+
+/* --- Main Container & Layout --- */
+.signup-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-background);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+}
+
+.signup-form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.signup-brand-section {
+  flex: 1;
+  display: none; /* Hidden on mobile */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, rgba(248, 245, 242, 0.8), rgba(248, 245, 242, 1)), 
+              url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+  background-size: cover;
+}
+
+/* --- Typography --- */
+.form-wrapper h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form-subheading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #666;
+  font-weight: 300;
+}
+
+/* --- Form Elements --- */
+.input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.input-field label {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid var(--color-subtle-border);
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-field input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(166, 121, 61, 0.1);
+}
+
+/* --- Buttons --- */
+.btn {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #8c632e;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn-google {
+  background-color: #fff;
+  color: var(--color-text);
+  border: 1px solid var(--color-subtle-border);
+  margin-top: 1rem;
+}
+
+.btn-google:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+}
+
+/* --- Separator & Auth Link --- */
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #aaa;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--color-subtle-border);
+}
+
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.auth-link a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* --- Branding Section (Right Side) --- */
+.brand-logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.brand-tagline {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: #555;
+  text-align: center;
+}
+
+
+/* --- Responsive Design (Mobile-First) --- */
+@media (min-width: 992px) {
+  .signup-brand-section {
+    display: flex; /* Show the brand section on larger screens */
+  }
+  .form-wrapper h2, .form-subheading {
+    text-align: left;
+  }
+}
