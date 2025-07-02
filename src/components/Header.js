@@ -10,9 +10,6 @@ const Header = () => {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // Add this line to see what the Header gets on every render
-  console.log('Header sees user:', user);
-
   const handleLogout = () => {
     logout();
     navigate('/signin'); // Redirect to sign-in page after logout
@@ -26,8 +23,16 @@ const Header = () => {
         </Link>
         <nav className="header-nav">
           {user ? (
-            // If user is logged in, show Logout button
+            // If user is logged in, show new dashboard links
             <>
+              {/* NEW: Link to the User Dashboard */}
+              <Link to="/dashboard" className="nav-link">Dashboard</Link>
+              
+              {/* NEW: Conditionally render Admin link */}
+              {user.role === 'admin' && (
+                <Link to="/admin/dashboard" className="nav-link">Admin</Link>
+              )}
+
               <span className="welcome-message">Welcome, {user.firstName}</span>
               <button onClick={handleLogout} className="btn-logout">Logout</button>
             </>
